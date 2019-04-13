@@ -1,21 +1,14 @@
 const express = require('express')
-//const subpageController = require('./../controllers/subpage')
+const todoController = require('./../controllers/todo')
 const router = express.Router()
 
 router
-  .get('/', (req, res) => {
-    res.send([
-      'Thing 1',
-      'Thing 2'
-    ])
-  })
-
-/* router
-  .route('/:id')
-  .get(subpageController.getSubpage)
+  .route('/')
+  .get(todoController.getAll)
+  .post(todoController.add)
 
 router
-  .route('/byName/:name')
-  .get(subpageController.getSubpageByName) */
+  .route('/delete')
+  .post(todoController.findOneAndDelete)
 
 module.exports = router
