@@ -6,7 +6,7 @@ class Database {
   }
 
 _connect() {
-     mongoose.connect(`mongodb+srv://${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true`, { useNewUrlParser: true })
+     mongoose.connect(process.env.DB_CONNECTION_STRING, { useNewUrlParser: true })
        .then(() => {
          console.log('Database connection successful')
        })

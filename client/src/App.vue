@@ -4,13 +4,17 @@
   </div>
 </template>
 <script>
+
 export default {
   name: 'app',
+  components: {},
   data () {
-    return {
-    }
+    return {}
   }
 }
 </script>
 <style>
+body {
+  margin: 0;
+}
 </style>
